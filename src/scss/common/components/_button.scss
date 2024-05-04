@@ -1,0 +1,82 @@
+$button-border-radius: 3px;
+$button-font-size: $font-size;
+$button-color: $theme-color-white;
+$button-color-fill: $theme-color-secondary;
+
+.button {
+  display: inline-block;
+  padding: 1.33em 1.66em;
+  border: 0;
+  background-color: $button-color-fill;
+  border-radius: $button-border-radius;
+  box-shadow: $box-shadow;
+  color: $button-color;
+  cursor: pointer;
+  font-size: $button-font-size;
+  font-weight: $font-weight-semibold;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+
+  &.circle {
+    width: 4rem;
+    height: 4rem;
+    padding: 0;
+  }
+
+  &:visited {
+    color: $button-color;
+  }
+
+  &:active {
+    background-color: lighten($button-color-fill, 10%);
+    color: $button-color;
+  }
+  
+  &[disabled],
+  &.disabled {
+    background-color: $disabled-background-color;
+    color: $disabled-color;
+  }
+
+  @include breakpoint {
+    &:hover {
+      background-color: lighten($button-color-fill, 10%);
+      color: $button-color;
+    }
+  }
+}
+
+.button--danger {
+  background-color: $error-color;
+
+  @include breakpoint {
+    &:hover {
+      background-color: lighten($error-color, 10%);
+      color: $button-color;
+    }
+  }
+}
+
+.button--flat {
+  border: 0;
+  background-color: transparent;
+  box-shadow: none;
+  color: $button-color-fill;
+
+  &:visited {
+    color: $button-color-fill;
+  }
+
+  &:hover {
+    color: lighten($button-color-fill, 10%);
+  }
+
+  &:active {
+    color: darken($button-color-fill, 10%);
+  }
+}
+
+.button--touch {
+  background-color: lighten($button-color-fill, 10%);
+}

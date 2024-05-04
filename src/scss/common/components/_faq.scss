@@ -1,0 +1,39 @@
+.faq__container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1.25rem;
+
+  @include breakpoint {
+    padding: 3.75rem;
+  }
+
+  h2 {
+    color: $theme-color-primary;
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include breakpoint {
+      font-size: $font-size-4xl;
+    }
+  }
+
+  .accordion__wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 61.875rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3.75rem;
+
+    @include breakpoint {
+      margin-bottom: 6.25rem;
+    }
+  }
+}

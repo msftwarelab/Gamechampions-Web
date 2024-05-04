@@ -1,0 +1,65 @@
+/** umb_name:Lighten */
+ 
+.umbraco-style-lighten {
+  opacity: .66;
+}
+ 
+/** umb_name:Colour 1 */
+ 
+.umbraco-style-color1 {
+  color: $theme-color-primary;
+}
+ 
+/** umb_name:Colour 2 */
+ 
+.umbraco-style-color2 {
+  color: $theme-color-secondary;
+}
+ 
+/** umb_name:Colour 3 */
+ 
+.umbraco-style-color3 {
+  color: $theme-color-terteary;
+}
+ 
+/** umb_name:Colour 4 */
+ 
+.umbraco-style-color4 {
+  color: $title-font-color-terteary;
+}
+ 
+/** umb_name:Heading 1 */
+.umbraco-style-heading1 {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @include breakpoint() {
+    font-size: 26px;
+  }
+}
+ 
+/** umb_name:Heading 2 */
+ 
+.umbraco-style-heading2 {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @include breakpoint() {
+    font-size: 22px;
+  }
+}
+ 
+.umbraco-style-heading3 {
+  display: block;
+  font-size: 16x;
+  font-weight: 600;
+
+  @include breakpoint() {
+    font-size: 20px;
+  }
+}
+ 

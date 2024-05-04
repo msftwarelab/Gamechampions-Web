@@ -1,0 +1,32 @@
+@import './theme.scss';
+@import '../../common/vendor/normalize/import-now';
+@import '../../common/vendor/_slick';
+
+@import '../../common/components/accordion';
+@import '../../common/components/carousel';
+@import '../../common/components/critical';
+@import '../../common/components/loader';
+@import '../../common/components/header';
+@import '../../common/components/banner';
+@import '../../common/components/material';
+@import '../../common/components/nav';
+@import '../../common/components/card';
+@import '../../common/components/breadcrumbs';
+@import '../../common/components/modal';
+@import '../../common/components/button';
+@import '../../common/components/form';
+@import '../../common/components/multiLanguage';
+@import '../../common/components/tournamentCard';
+@import '../../common/components/testimonialCard';
+@import '../../common/components/liveTracker';
+@import '../../common/components/faq';
+
+@import '../../common/custom/form';
+@import '../../common/custom/material';
+@import "../../common/custom/slick";
+@import '../../common/custom/page';
+@import '../../common/custom/home';
+@import '../../common/custom/contact';
+@import '../../common/custom/news';
+@import '../../common/custom/testimonials';
+@import '../../common/custom/tournamentCardSlides';

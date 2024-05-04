@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html {{{ htmlAttributes }}}>
+
+<head>
+    {{{ head }}}
+    {{> shared/google-tag-manager }}
+    <style type="text/css">{{{data.inlineStyles}}}</style>
+</head>
+
+    <body {{{ bodyAttributes }}}>
+        {{> shared/google-tag-manager-noscript }}
+        {{{body}}}
+
+        {{> shared/async-css }}
+
+
+        {{#each data.vendorScripts}}
+            <script src="{{this}}"></script>
+        {{~/each}}
+        {{#each data.remoteScripts}}
+            <script defer src="{{this}}"></script>
+        {{~/each}}
+    </body>
+</html>

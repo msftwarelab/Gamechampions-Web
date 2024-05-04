@@ -1,0 +1,125 @@
+.carousel__container {
+  position: relative;
+  overflow: hidden !important;
+  width: 100%;
+  height: auto;
+  flex-flow: nowrap;
+  padding: 20px 0;
+}
+
+.carousel-track {
+  top: 0;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  transition: transform .2s ease;
+}
+
+.carousel-track_prev {
+  position: absolute;
+  z-index: 8;
+  top: 50%;
+  left: 20px;
+
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $theme-color-white;
+  border-radius: 50%;
+
+  filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.4));
+  transform: translateY(-50%);
+
+  @include breakpoint {
+    left: 30px;
+  }
+}
+
+.carousel-track_prev::before {
+  position: relative;
+  display: flex;
+  width: 0.45em;
+  height: 0.45em;
+  align-items: center;
+  justify-content: center;
+  border-width: 0.25em 0.25em 0 0;
+  border-style: solid;
+  content: '';
+  transform: rotate(-45deg);
+  transform: rotate(-135deg);
+  vertical-align: top;
+}
+
+.carousel-track_next {
+  position: absolute;
+  z-index: 8;
+  top: 50%;
+  right: 20px;
+
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $theme-color-white;
+  border-radius: 50%;
+  filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.4));
+  transform: translateY(-50%);
+
+  @include breakpoint {
+    right: 30px;
+  }
+}
+
+.carousel-track_next::before {
+  position: relative;
+  display: flex;
+  width: 0.45em;
+  height: 0.45em;
+  align-items: center;
+  justify-content: center;
+  border-width: 0.25em 0.25em 0 0;
+  border-style: solid;
+  content: '';
+  transform: rotate(-45deg);
+  transform: rotate(45deg);
+  vertical-align: top;
+}
+
+.carousel-edge-fade_left {
+  position: absolute;
+  z-index: 7;
+  top: 0;
+  left: 0;
+  height: 100%;
+
+  background: $theme-color-primary;
+  background: -moz-linear-gradient(left, $theme-color-primary 0%, $theme-color-primary 5%, rgba(255,255,255,0) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, $theme-color-primary), color-stop(5%, $theme-color-primary), color-stop(100%, rgba(255,255,255,0)));
+  background: -webkit-linear-gradient(left, $theme-color-primary 0%, $theme-color-primary 5%, rgba(255,255,255,0) 100%);
+  background: -o-linear-gradient(left, $theme-color-primary 0%, $theme-color-primary 5%, rgba(255,255,255,0) 100%);
+  background: -ms-linear-gradient(left, $theme-color-primary 0%, $theme-color-primary 5%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(to right, $theme-color-primary 0%, $theme-color-primary 5%, rgba(255,255,255,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$theme-color-primary', endColorstr='#ffffff', GradientType=1 );
+}
+
+.carousel-edge-fade_right {
+  position: absolute;
+  z-index: 7;
+  top: 0;
+  right: 0;
+  height: 100%;
+
+  background: rgba(255,255,255,0);
+  background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, $theme-color-primary 95%, $theme-color-primary 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,0)), color-stop(95%, $theme-color-primary), color-stop(100%, $theme-color-primary));
+  background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, $theme-color-primary 95%, $theme-color-primary 100%);
+  background: -o-linear-gradient(left, rgba(255,255,255,0) 0%, $theme-color-primary 95%, $theme-color-primary 100%);
+  background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%, $theme-color-primary 95%, $theme-color-primary 100%);
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, $theme-color-primary 95%, $theme-color-primary 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='$theme-color-primary', GradientType=1 );
+}

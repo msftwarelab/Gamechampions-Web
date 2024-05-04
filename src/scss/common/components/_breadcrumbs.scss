@@ -1,0 +1,66 @@
+.breadcrumbs {
+  font-size: 0.8em;
+  line-height: 1.25em;
+  text-transform: uppercase;
+}
+
+.card--breadcrumbs {
+  z-index: 2;
+  width: 100%;
+  padding: 1rem 4rem;
+  margin-top: 4rem;
+  background-color: #ACFF5D;
+  @include breakpoint {
+    display: block;
+  }
+}
+
+.breadcrumbs__links {
+  padding: 0;
+  margin: 0;
+  font-size: 0.85em;
+  list-style: none;
+  text-align: left;
+  text-transform: capitalize !important;
+}
+
+.breadcrumbs__links__link {
+  display: inline-block;
+  margin-right: 0.33em;
+  line-height: 1;
+  vertical-align: middle;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  a {
+    color: #000E3F;
+    text-decoration: underline !important;
+    &:visited {
+      color: $theme-color-primary;
+    }
+
+    &:hover,
+    &:active {
+      color: lighten($theme-color-primary-light, 10%);
+    }
+
+    &.selected {
+      color: $theme-color-primary-dark;
+      pointer-events: none;
+    }
+  }
+
+  .arrow {
+    margin: 0 0.1rem;
+    font-size: 1.45em;
+    font-weight: bold;
+  }
+
+  span {
+    color: #000E3F;
+    font-size: 18px;
+    font-weight: 400;
+  }
+}

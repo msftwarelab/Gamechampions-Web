@@ -1,0 +1,7 @@
+{
+    "brandName": "GameChampions",
+    "apiUrl": "https://cms.gamechampions.com/",
+    "dashboardApiUrl": "https://api.gamechampions.com/",
+    "dashboardUrl": "https://play.gamechampions.com/",
+    "storageUrl": "https://gamechampionsstorage.blob.core.windows.net"
+}

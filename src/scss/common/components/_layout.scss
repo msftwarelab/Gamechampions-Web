@@ -1,0 +1,23 @@
+.main {
+  min-height: 24em;
+
+  &.main--enter {
+    opacity: 0.0001;
+  }
+
+  &.main--enter.main--enter-active {
+    opacity: 1;
+    transition: opacity 100ms ease-in;
+  }
+
+  &.main--exit {
+    opacity: 0.0001;
+  }
+
+  &.main--error {
+    overflow: hidden;
+    height: 0;
+    min-height: auto;
+    opacity: 0.0001;
+  }
+}

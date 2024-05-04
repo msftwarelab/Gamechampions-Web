@@ -1,0 +1,7 @@
+{
+    "brandName": "GameChampions",
+    "apiUrl": "https://gamechampions-web-api-win-staging.azurewebsites.net/",
+    "dashboardApiUrl": "https://gamechampions-api-lnx-staging.azurewebsites.net/",
+    "dashboardUrl": "https://gamechampions-lnx-staging.azurewebsites.net/",
+    "storageUrl": "https://gamechampions.blob.core.windows.net"
+}

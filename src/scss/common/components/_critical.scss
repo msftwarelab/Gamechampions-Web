@@ -1,0 +1,129 @@
+html {
+  position: relative;
+  background-color: $background-color;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight-regular;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: $theme-color-body;
+  font-family: $font-family;
+  font-size: $font-size-m;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: $font-weight-regular;
+  line-height: $line-height;
+}
+select,
+input,
+button,
+textarea {
+  color: $font-color;
+  font-family: $font-family;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: $font-weight-regular;
+  line-height: $line-height;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: $theme-color-secondary;
+  font-size: $font-size-m;
+  font-weight: $font-weight-semibold;
+  text-decoration: none;
+  
+  &:visited {
+    color: $theme-color-secondary;
+  }
+
+  &:hover,
+  &:active {
+    color: lighten($theme-color-secondary, 10%);
+  }
+
+  &.disabled {
+    color: $disabled-color;
+    pointer-events: none;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3 {
+  font-family: $alternate-font-family;
+}
+
+h1 {
+  margin-top: 0.333em;
+  color: $theme-color-primary;
+  font-size: $font-size-2lg;
+  font-weight: $font-weight-bold;
+  line-height: 1.125;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include breakpoint {
+    overflow: hidden;
+    font-size: $font-size-2xl;
+    text-align: left;
+  }
+}
+
+h2 {
+  color: $theme-color-primary;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+
+  @include breakpoint {
+    font-size: $font-size-xl;
+  }
+}
+
+h3 {
+  color: $theme-color-primary;
+  font-size: $font-size-2m;
+  font-weight: $font-weight-semibold
+}
+
+h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+  display: block;
+  height: 4.35rem;
+  margin-top: -3.45rem;
+  content: " ";
+  visibility: hidden;
+}
+
+.content {
+  position: relative;
+  padding: 1em 1em 0;
+}
+
+#root {
+  min-height: calc(100vh - 7em);
+}
+
+.main {
+  margin-top: 3.5em;
+
+  &.native-mobile {
+    margin-top: 0;
+  }
+}
+
+.offline {
+  filter: grayscale(1);
+}
+
+.hidden {
+  visibility: hidden;
+}

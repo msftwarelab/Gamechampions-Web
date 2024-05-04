@@ -1,0 +1,43 @@
+.accordion {
+  width: 100%;
+  padding: 20px 0;
+  border: none;
+  border-bottom: 4px solid $theme-color-secondary;
+  margin: 0;
+  color: $theme-color-secondary;
+  cursor: pointer;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  outline: none;
+  text-align: left;
+  text-transform: uppercase;
+  transition: 0.4s;
+
+  @include breakpoint {
+    padding: 60px 0;
+    font-size: $font-size-2xl;
+  }
+}
+
+.accordion:hover {
+  background-color: $section-background-color;
+}
+
+.panel {
+  display: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0 1.125rem;
+  background-color: $theme-color-white;
+
+  p {
+    font-size: $font-size-regular;
+    font-weight: $font-weight-regular;
+    text-align: left;
+  }
+}
+
+.panel-active {
+  display: block;
+  text-align: left;
+}

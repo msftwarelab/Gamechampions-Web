@@ -1,0 +1,45 @@
+.slick-prev,
+.slick-next {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  margin: auto;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0;
+  line-height: 0;
+  outline: none;
+  transform: translate(0, -50%);
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  opacity: 1;
+  outline: none;
+}
+
+.slick-prev.slick-disabled,
+.slick-next.slick-disabled {
+  opacity: 0.3;
+}
+
+
+.slick-prev {
+  left: 0;
+  background: url($storage-url + "/left-arrow.svg") 50% 50% no-repeat;
+  background-size: 100%;
+} 
+
+.slick-next {
+  right: 0;
+  background: url($storage-url +  "/right-arrow.svg") 50% 50% no-repeat;
+  background-size: 100%;
+}

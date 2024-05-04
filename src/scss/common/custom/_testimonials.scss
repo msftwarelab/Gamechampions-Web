@@ -1,0 +1,39 @@
+.testimonials {
+  width: 100%;
+  padding: 10px 0;
+  background-color: $theme-color-primary;
+
+  @include breakpoint {
+    padding: 60px 0;
+  }
+
+  .testimonials__info {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+
+    @include breakpoint {
+      padding: 0 100px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+
+  h2 {
+    margin: 0;
+    color: $theme-color-white;
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    line-height: 40px;
+    text-transform: uppercase;
+
+    @include breakpoint {
+      font-size: $font-size-4xl;
+      line-height: 3.75rem;
+    }
+  }
+}

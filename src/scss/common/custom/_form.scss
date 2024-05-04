@@ -1,0 +1,70 @@
+$form-field__label-color: $title-font-color-primary;
+$form-field--invalid__label-color: $darken-color;
+
+.form-field__input {
+  padding: 0.75em 0.5em;
+  border: none;
+}
+
+.form-field__label {
+  position: absolute;
+  top: 1.5em;
+  left: 0.5em;
+  height: 1.714em;
+  margin: auto;
+  color: $form-field__label-color;
+  font-size: 0.875em;
+  font-weight: $font-weight-regular;
+  pointer-events: none;
+
+  @include breakpoint {
+    padding-left: 0.75em;
+  }
+}
+
+.form-field__error-message {
+  display: block;
+  padding: 0.25em 0.5em;
+  border-left: 3px solid $error-color;
+  margin-top: 0.25em;
+  background-color: $error-background-color;
+  border-radius: $input-border-radius;
+  color: $font-color;
+}
+
+.no-js {
+  .form-field__input {
+    ~ .form-field__label {
+      transform: translate3d(-0.1em, -0.75em, 0) scale(0.75);
+    }
+  }
+}
+
+.form__section {
+  @include container;
+}
+
+.form__section__title {
+  margin-top: 2em;
+
+  @include breakpoint {
+    padding-left: 0.5em;
+  }
+}
+
+.form-field__input-container {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom: 3px solid $form-field__label-color;
+    border-radius: $input-border-radius;
+    content: "";
+    pointer-events: none;
+    transform: scaleX(0);
+    transition: transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+  }
+}

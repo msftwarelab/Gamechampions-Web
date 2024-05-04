@@ -1,0 +1,77 @@
+.live-tracker {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.875rem;
+  background-color: $theme-color-white;
+
+  h2 {
+    color: $theme-color-primary;
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include breakpoint {
+      font-size: $font-size-4xl;
+    }
+  }
+
+  p {
+    max-width: 61.25rem;
+    color: $theme-color-primary;
+    font-size: $font-size-m;
+    font-weight: $font-weight-regular;
+    line-height: 2.25rem;
+    text-align: center;
+
+    @include breakpoint {
+      font-size: $font-size-xl;
+    }
+  }
+}
+
+.stats__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5.625rem;
+  gap: 5rem;
+
+  @include breakpoint {
+    flex-direction: row;
+    gap: 150px;
+  }
+
+  .stats__container__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      margin: 0.625rem 0;
+      margin-bottom: 1.25rem;
+      color: $theme-color-secondary;
+      font-size: 3.125rem;
+      font-weight: $font-weight-bold;
+
+      @include breakpoint {
+        margin-bottom: 2.5rem;
+        font-size: 5rem;
+      }
+    }
+
+    p {
+      color: $theme-color-primary;
+      font-size: 1.125rem;
+      font-weight: 500;
+
+      @include breakpoint {
+        font-size: 1.25rem
+      }
+    }
+  }
+}

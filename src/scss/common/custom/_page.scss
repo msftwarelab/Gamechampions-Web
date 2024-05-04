@@ -1,0 +1,132 @@
+.page {
+  position: relative;
+  margin-top: 3.5em;
+
+  &.native-mobile {
+    margin-top: 0;
+  }
+}
+
+.page__container {
+  @include breakpoint {
+    @include container($max-width-narrow);
+  }
+}
+  
+.page__section {
+  padding: 2em 1em;
+}
+  
+.page__section__title {
+  border-bottom: 2px solid $theme-color-primary;
+  margin-bottom: 1em;
+
+  @include breakpoint {
+    margin-bottom: 2em; 
+  }
+  
+  h2 {
+    margin-bottom: 0.5em;
+  }
+}
+
+.page__section__description__richtext {
+  img {
+    max-width: 100%;
+    height: auto !important;
+  }
+
+  ul {
+    list-style: disc;
+  }
+}
+
+.page__banner {
+  position: relative;
+  
+  @include breakpoint {
+    padding-bottom: 0;
+  }
+  
+  .banner__content {
+    height: 16em;
+  
+    @include breakpoint {
+      height: 32em;
+    }
+  
+    .banner__image {
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+  
+      img {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        min-width: 101%;
+        min-height: 100%;
+        transform: translate(-50%, -10%);
+  
+        @include breakpoint {
+          top: 30%;
+          transform: translate(-50%, -30%);
+        }
+      }
+    }
+  
+    .banner__text {
+      .banner__text__title  {
+        margin: 0 auto;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .banner__text__summary {
+        padding: 0 1em;
+        margin: 0.5em auto 0;
+        line-height: 1.25;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        white-space: pre-line;
+  
+        @include breakpoint {
+          padding: 0;
+          font-size: $font-size-2xl;
+          font-weight: $font-weight-semibold;
+        }
+      }
+
+      .banner__button-wrapper {
+        width: 100%;
+        padding: 0 1em;
+
+        @include breakpoint {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .banner__button {
+          width: auto;
+          padding: 0 0.2em;
+          margin: 1em 0 0;
+          background-color: $theme-color-secondary;
+          color: $theme-color_white;
+          font-size: 1.8em;
+          font-weight: $font-weight-semibold;
+
+          @include breakpoint {
+            display: block;
+            min-width: 10em;
+            padding: 0.2em 0.8em;
+            font-size: $font-size-2xl;
+          }
+        }
+      }
+    }
+  }
+}
+
+.pageNotFound {
+  padding: 2.5rem 0 0 0;
+}
